@@ -1,0 +1,58 @@
+<ion-menu contentId="main-content" type="overlay" [swipeGesture]="false">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>¡Bienvenido, {{ usuario }}!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="redirectTo('estudiante')">
+        <ion-icon name="person" slot="start"></ion-icon>
+        <ion-label class="ion-text-start">Estudiante</ion-label>
+      </ion-item>
+      <ion-item (click)="redirectTo('escanear-qr')">
+        <ion-icon name="qr-code" slot="start"></ion-icon>
+        <ion-label class="ion-text-start">Escanear QR</ion-label>
+      </ion-item>
+      <ion-item (click)="salir()">
+        <ion-icon name="exit-outline" slot="start"></ion-icon>
+        <ion-label class="exit-outline">Cerrar Sesion</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{ currentPage }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" id="main-content">
+  <ion-spinner *ngIf="isLoading"></ion-spinner>
+  
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
